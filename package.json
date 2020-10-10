@@ -1,0 +1,28 @@
+{
+  "name": "hackingRio_2020",
+  "version": "1.0.0",
+  "description": "HackingRio_2020",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^14.13.0",
+    "nodemon": "^2.0.4",
+    "request": "^2.88.2",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriq3lima/hackingRio_2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henriq3lima/hackingRio_2020/issues"
+  },
+  "homepage": "https://github.com/henriq3lima/hackingRio_2020#readme"
+}

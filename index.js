@@ -10,7 +10,8 @@ app.listen(process.env.PORT || 8000, function () {
     console.log("A API está funcionando!");
   });
   const hostname = "https://apigateway.serpro.gov.br/consulta-cpf-df/v1";
-  const path = "/cpf/";
+  var cpf = "09147215690"
+  const path = `/cpf/${cpf}`;
   
 var token = token_consultaCPF()
 const options = {
@@ -25,11 +26,20 @@ const options = {
 
   function callApi(error, response, body) {
     if (!error && response.statusCode == 200) {
-      console.log(body);
+      let data = new Date()
+      let output = JSON.parse(body)
+      let idade = output.nascimento
+      let nasc = new Date(
+        idade.substr(4),
+        idade.substr(2,2)-1,
+        idade.substr(0,2)
+        )
+      console.log((data-nasc)/31536000000);
+  
+
     }
 
   }
-
 
   app.get("/", (req, res) => {
     request(options,callApi)
